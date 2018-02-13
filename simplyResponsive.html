@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>simplyResponsive</title>
+    <style>
+        #h1 {
+            background-color: grey;
+            padding: 5px;
+            border: solid 1px black;
+            margin-right: 5px;
+        }
+
+        #p1 {
+            background-color: lightgray;
+            padding: 5px;
+            border: solid 1px black;
+            margin-right: 5px;
+        }
+
+        .p2 {
+            background-color: blanchedalmond;
+            padding: 5px;
+            border: solid 1px black;
+            margin-right: 5px;
+        }
+
+        @media only screen and (max-width:480px) {
+            .p2 {
+                display: none;
+            }
+            #phone {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width:481px) {
+            .p2 {
+                display: none;
+            }
+            #tablet {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width:1024px) {
+            .p2 {
+                display: none;
+            }
+            #tablet{
+                display: none;
+            }
+            #desktop {
+                display: block;
+            }
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+
+<body>
+    <div id="h1">@media queries</div>
+    <div id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam cumque quod incidunt, eius iste quo saepe dicta expedita
+        omnis similique dignissimosSunt, deserunt obcaecati.</div>
+    <div id="phone" class="p2">Phone:Width less than or equal to 480px</div>
+    <div id="desktop" class="p2">Desktop:Width greater or equal to 1024px</div>
+    <div id="tablet" class="p2">Tablet:Width between 481px and 1023px</div>
+</body>
+
+</html>
